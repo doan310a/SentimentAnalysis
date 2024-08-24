@@ -26,8 +26,7 @@ def save_model_state(model, name):
     # Build the full file path. PyTorch uses the .pth extension by convention
     path = os.path.join(WEIGHT_DIR, name + ".pth")
 
-    # TODO: Save the model weights to disk
-    # SOLUTION LINE
+    # Save the model weights to disk
     torch.save(model.state_dict(), path)
     
     
@@ -42,8 +41,7 @@ def load_model_state(model, name):
     # Check that the weights exist
     if os.path.exists(path):
         
-        # TODO: Load the model weights from disk
-        # SOLUTION LINE
+        # Load the model weights from disk
         model.load_state_dict(torch.load(path))
         
         print("Model state loaded from", path)

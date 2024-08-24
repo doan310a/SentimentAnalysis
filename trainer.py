@@ -70,9 +70,6 @@ def train_model(model, train_loader, test_loader, num_epochs, loss_func, optimiz
     Uses only a train and test split, so test data is used for validation.
     """
 
-    # TODO: Uncomment below when you get to the wandb visualization section
-    #run = wandb.init(project ="CSE5DL Transformer Lab", name=exp_name)
-
     device = utils.get_training_device()
     model.to(device)
 
@@ -86,14 +83,3 @@ def train_model(model, train_loader, test_loader, num_epochs, loss_func, optimiz
         print("Epoch: {}. Train loss: {:.3f},  accuracy: {:.3f}. Test loss: {:.3f} accuracy: {:.3f}".format(
             epoch, train_epoch_loss, train_epoch_accuracy, test_epoch_loss, test_epoch_accuracy))
 
-        #TODO: Uncomment below when you get to the wandb visualization section
-        #wandb.log({
-        #         "train_loss": train_epoch_loss,
-        #         "train_accuracy": train_epoch_accuracy,
-        #         "test_loss": test_epoch_loss,
-        #         "test_accuracy": test_epoch_accuracy})
-    
-    # TODO: Uncomment below when you get to the wandb visualization section
-    #Finish wandb run
-    #run.finish()
-            

@@ -5,8 +5,6 @@ import torch.nn as nn
 Long Short-Term Memory (LSTM) model. These were once the "go-to" type of model
 for language modelling tasks, but have been replaced by transformer models.
 
-Read through the code below to get an idea of how this model works. Don't worry
-if you don't fully understand it, as LSTMs can be tricky!
 """
 
 
